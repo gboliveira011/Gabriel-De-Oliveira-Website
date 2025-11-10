@@ -7,17 +7,21 @@
 
     <link rel="stylesheet" type="text/css" href="style.css">
 
+    <!--Priotizes loading of background image-->
     <link rel="preload" href="/images/background.jpg" as="image">
 </head>
 <body>
     <h1>Gabriel De Oliveira</h1>
-    <nav id="topnav">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html">My Projects</a></li>
-            <li><a href="about.html">About Me</a></li>
-        </ul>
+
+    <nav id="homepage-nav">
+        <a href="projects.html"><div class="homepage-nav-item">
+            <div class="header">My Projects</div>
+            <img src="/images/my-projects-placeholder.jpg">
+        </div></a>
+        <a href="about.html"><div class="homepage-nav-item">
+            <div class="header">About Me</div>
+            <img src="/images/about-me-placeholder.jpg">
+        </div></a>
     </nav>
-    <p>This is my first website.</p>
 </body>
 </html>

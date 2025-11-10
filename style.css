@@ -50,23 +50,65 @@ body {
     text-align: center;
 
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
+    /* This sets the element to be a flexbox, which allows elements within
+    to be automatically arranged flexibly, hence "flexbox" */
+    flex-direction: column; /* Arranges elements within flexbox to be in a column */
+    align-items: center; /* Aligns elements in the center */
+    height: 100vh; /* Sets height of body to be all of the viewport (browser window size)'s */
 }
 
 a {
     color: #67edf7;
 }
 
+/* IDs (#) are used for single, unique elements */
 #topnav ul, #my-projects-list {
     list-style-type: none;
+    /* Sets marker of bulleted list, which is none here */
     padding-left: 0;
+    /* Padding is the space between the element's boundary and its inner elements. Here, the left padding is set to zero,
+    removing it. */
 }
 
+/* Classes (.) are used for multiple, reusable elements */
 .left-text {
     text-align: left;
     margin: 0 1%;
     /* The margin property defines the space around the element. When there are two values, the first defines top and bottom
     margin and the second defines left and right margin. Percentages change the value based on screen width. */
+}
+
+#homepage-nav {
+    display: flex;
+    flex-direction: row; /* This time, the flexbox's elements are in a row! */
+    align-items: center;
+    
+    gap: 20px; /* Sets gap between elements within */
+
+    margin: 100px;
+}
+
+.homepage-nav-item {
+    width: 500px;
+}
+
+/* This means the rules apply to all "a" elements within the elements with the "homepage-nav-item" class */
+.homepage-nav-item a {
+    text-decoration: none; /* Removes underline of link */
+}
+
+/* Same but for elements with the "header" class */
+.homepage-nav-item .header {
+    background-color: #67edf7;
+    color: #065C76;
+    /* Color contrast is really important for web accessibility! Tool for checking:
+    https://webaim.org/resources/contrastchecker/ */
+
+    padding: 15px;
+    font-size: 1.5em; /* "em" means "times relative to size of current font" */
+    font-weight: bold;
+}
+
+.homepage-nav-item img {
+    width: 100%; /* Width is all of the parent element's width */
 }

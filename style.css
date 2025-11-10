@@ -69,7 +69,7 @@ i {
 }
 
 a {
-    color: #fffb7d;
+    color: #fff700;
 }
 
 /* IDs (#) are used for single, unique elements */
@@ -109,8 +109,8 @@ a {
 
 /* Like "#homepage.nav a" but for elements with the "header" class within elements with the "homepage-nav-item" class*/
 .homepage-nav-item .header {
-    background-color: #fffb7d;
-    color: #697400;
+    background-color: #fff700;
+    color: #697402;
     /* Color contrast is really important for web accessibility! Tool for checking:
     https://webaim.org/resources/contrastchecker/ */
 

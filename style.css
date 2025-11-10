@@ -1,5 +1,40 @@
+/* The @font-face rule is used to define custom fonts with font files, so the font can show on all platforms without needing
+to be installed on them.
+
+We use font files so that the same font shows up on all platforms. A free font is used instead of a propriety one, like the
+many Microsoft Office fonts, as respect for copyright will make a good impression as professional web developer. */
+@font-face {
+    font-family: "Source Code Pro";
+    src: url("/fonts/source-code-pro.woff2");
+    font-display: swap;
+    /* font-display: swap sets text using the font to use the default font before the font is loaded. This is for site
+    performance. */
+}
+
+@font-face {
+    font-family: "Source Code Pro";
+    src: url("/fonts/source-code-pro-italic.woff2");
+    font-style: italic; /* This ensures this specific font is used for italic text. */
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Source Code Pro";
+    src: url("/fonts/source-code-pro-bold.woff2");
+    font-weight: bold; /* Ditto */
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Source Code Pro";
+    src: url("/fonts/source-code-pro-bold-italic.woff2");
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
 body {
-    font-family: 'Consolas', 'Courier New', monospace;
+    font-family: 'Source Code Pro';
     background-image: url("/images/background.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;

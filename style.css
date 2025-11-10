@@ -56,3 +56,10 @@ a {
     list-style-type: none;
     padding-left: 0;
 }
+
+.left-text {
+    text-align: left;
+    margin: 0 1%;
+    /* The margin property defines the space around the element. When there are two values, the first defines top and bottom
+    margin and the second defines left and right margin. Percentages change the value based on screen width. */
+}

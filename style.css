@@ -1,3 +1,17 @@
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Consolas', 'Courier New', monospace;
+    background-image: url("/images/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #ffffff;
+    text-align: center;
+}
+
+a {
+    color: #67edf7;
+}
+
+#topnav li, #my-projects-list li {
+    list-style-type: none;
 }

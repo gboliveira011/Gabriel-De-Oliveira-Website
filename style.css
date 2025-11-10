@@ -34,7 +34,7 @@ many Microsoft Office fonts, as respect for copyright will make a good impressio
 }
 
 body {
-    margin: 0;
+    margin: 0; /* Defines the space around the element. Here, it is zero. */
     
     background-image: url("/images/background-compressed.webp");
     /* Background was compressed on TinyPNG and converted to WebP with IrfanView
@@ -60,7 +60,7 @@ body {
 }
 
 a {
-    color: #67edf7;
+    color: #fffb7d;
 }
 
 /* IDs (#) are used for single, unique elements */
@@ -76,8 +76,7 @@ a {
 .left-text {
     text-align: left;
     margin: 0 1%;
-    /* The margin property defines the space around the element. When there are two values, the first defines top and bottom
-    margin and the second defines left and right margin. Percentages change the value based on screen width. */
+    /* When the margin property are two values, the first defines top and bottom margin and the second defines left and right margin. Percentages change the value based on screen width. */
 }
 
 #homepage-nav {
@@ -90,19 +89,19 @@ a {
     margin: 100px;
 }
 
+/* This means the rules apply to all "a" elements within the elements with the "homepage-nav-item" class */
+#homepage-nav a {
+    text-decoration: none; /* Removes underline of link */
+}
+
 .homepage-nav-item {
     width: 500px;
 }
 
-/* This means the rules apply to all "a" elements within the elements with the "homepage-nav-item" class */
-.homepage-nav-item a {
-    text-decoration: none; /* Removes underline of link */
-}
-
-/* Same but for elements with the "header" class */
+/* Like "#homepage.nav a" but for elements with the "header" class within elements with the "homepage-nav-item" class*/
 .homepage-nav-item .header {
-    background-color: #67edf7;
-    color: #065C76;
+    background-color: #fffb7d;
+    color: #697400;
     /* Color contrast is really important for web accessibility! Tool for checking:
     https://webaim.org/resources/contrastchecker/ */
 

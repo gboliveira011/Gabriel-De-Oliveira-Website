@@ -34,11 +34,18 @@ many Microsoft Office fonts, as respect for copyright will make a good impressio
 }
 
 body {
-    font-family: 'Source Code Pro';
-    background-image: url("/images/background.jpg");
+    background-image: url("/images/background-compressed.webp");
+    /* Background was compressed on TinyPNG and converted to WebP with IrfanView
+    The background image must be optimized as much as possible for fast site
+    performance. */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    background-color: #000000;
+    /* A fallback background color matching the image is used to reduce severity
+    of flashing. */
+
+    font-family: 'Source Code Pro';
     color: #ffffff;
     text-align: center;
 

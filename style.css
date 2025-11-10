@@ -35,7 +35,6 @@ many Microsoft Office fonts, as respect for copyright will make a good impressio
 
 body {
     margin: 0; /* Defines the space around the element. Here, it is zero. */
-
     background-image: url("/images/background-compressed.webp");
     /* Background was compressed on TinyPNG and converted to WebP with IrfanView
     The background image must be optimized as much as possible for fast site

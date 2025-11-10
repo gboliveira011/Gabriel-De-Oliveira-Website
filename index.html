@@ -3,19 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gabriel De Oliveira Website</title>
+    <title>Gabriel De Oliveira</title>
 
     <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!--Priotizes loading of background image-->
+    <link rel="preload" href="/images/background-compressed.webp" as="image">
 </head>
 <body>
     <h1>Gabriel De Oliveira</h1>
-    <nav id="topnav">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html">My Projects</a></li>
-            <li><a href="about.html">About Me</a></li>
-        </ul>
+
+    <nav id="homepage-nav">
+        <a href="projects.html"><div class="homepage-nav-item">
+            <div class="header">My Projects</div>
+            <img src="/images/my-projects-placeholder.jpg">
+        </div></a>
+        <a href="about.html"><div class="homepage-nav-item">
+            <div class="header">About Me</div>
+            <img src="/images/about-me-placeholder.jpg">
+        </div></a>
     </nav>
-    <p>This is my first website.</p>
+
+    <footer>
+        Copyright © 2025 by Gabriel De Oliveira. Additional contributions by <a href="https://princesspandalover.com/">Lisa Huang</a>.
+    </footer>
 </body>
 </html>

@@ -1,23 +1,132 @@
+/* The @font-face rule is used to define custom fonts with font files, so the font can show on all platforms without needing
+to be installed on them.
+
+We use font files so that the same font shows up on all platforms. A free font is used instead of a propriety one, like the
+many Microsoft Office fonts, as respect for copyright will make a good impression as professional web developer. */
+@font-face {
+    font-family: "Source Code Pro";
+    src: url("/fonts/source-code-pro.woff2");
+    font-display: swap;
+    /* font-display: swap sets text using the font to use the default font before the font is loaded. This is for site
+    performance. */
+}
+
+@font-face {
+    font-family: "Source Code Pro";
+    src: url("/fonts/source-code-pro-italic.woff2");
+    font-style: italic; /* This ensures this specific font is used for italic text. */
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Source Code Pro";
+    src: url("/fonts/source-code-pro-bold.woff2");
+    font-weight: bold; /* Ditto */
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Source Code Pro";
+    src: url("/fonts/source-code-pro-bold-italic.woff2");
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
 body {
-    font-family: 'Consolas', 'Courier New', monospace;
-    background-image: url("/images/background.jpg");
+    margin: 0; /* Defines the space around the element. Here, it is zero. */
+
+    background-image: url("/images/background-compressed.webp");
+    /* Background was compressed on TinyPNG and converted to WebP with IrfanView
+    The background image must be optimized as much as possible for fast site
+    performance. */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    background-color: #000000;
+    /* A fallback background color matching the image is used to reduce severity
+    of flashing. */
+
+    font-family: 'Source Code Pro';
     color: #ffffff;
     text-align: center;
 
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
+    /* This sets the element to be a flexbox, which allows elements within
+    to be automatically arranged flexibly, hence "flexbox" */
+    flex-direction: column; /* Arranges elements within flexbox to be in a column */
+    align-items: center; /* Aligns elements in the center */
+    height: 100vh; /* Sets height of body to be all of the viewport (browser window size)'s */
+}
+
+/* These are important to define because browsers are no longer obligated to bold or italicize text with these tags */
+b {
+    font-weight: bold;
+}
+
+i {
+    font-style: italic;
 }
 
 a {
-    color: #67edf7;
+    color: #fff700;
 }
 
+/* IDs (#) are used for single, unique elements */
 #topnav ul, #my-projects-list {
     list-style-type: none;
+    /* Sets marker of bulleted list, which is none here */
     padding-left: 0;
+    /* Padding is the space between the element's boundary and its inner elements. Here, the left padding is set to zero,
+    removing it. */
+}
+
+/* Classes (.) are used for multiple, reusable elements */
+.left-text {
+    text-align: left;
+    margin: 0 1%;
+    /* When the margin property are two values, the first defines top and bottom margin and the second defines left and right margin. Percentages change the value based on screen width. */
+}
+
+#homepage-nav {
+    display: flex;
+    flex-direction: row; /* This time, the flexbox's elements are in a row! */
+    align-items: center;
+
+    gap: 20px; /* Sets gap between elements within */
+
+    margin-top: 100px;
+}
+
+/* This means the rules apply to all "a" elements within the elements with the "homepage-nav-item" class */
+#homepage-nav a {
+    text-decoration: none; /* Removes underline of link */
+}
+
+.homepage-nav-item {
+    width: 500px;
+}
+
+/* Like "#homepage.nav a" but for elements with the "header" class within elements with the "homepage-nav-item" class*/
+.homepage-nav-item .header {
+    background-color: #fff700;
+    color: #697402;
+    /* Color contrast is really important for web accessibility! Tool for checking:
+    https://webaim.org/resources/contrastchecker/ */
+
+    padding: 15px;
+    font-size: 1.5em; /* "em" means "times relative to size of current font" */
+    font-weight: bold;
+}
+
+.homepage-nav-item img {
+    width: 100%; /* Width is all of the parent element's width */
+}
+
+footer {
+  margin-top: auto;
+  margin-bottom: 0;
+  padding: 20px;
+  font-size: 0.75em;
+  flex-shrink: 0; /* Setting flex-shrink to 0 prevents footer from shrinking */
 }

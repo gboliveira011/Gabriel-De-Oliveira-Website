@@ -59,6 +59,15 @@ body {
     height: 100vh; /* Sets height of body to be all of the viewport (browser window size)'s */
 }
 
+/* These are important to define because browsers are no longer obligated to bold or italicize text with these tags */
+b {
+    font-weight: bold;
+}
+
+i {
+    font-style: italic;
+}
+
 a {
     color: #fffb7d;
 }
@@ -86,7 +95,7 @@ a {
     
     gap: 20px; /* Sets gap between elements within */
 
-    margin: 100px;
+    margin-top: 100px;
 }
 
 /* This means the rules apply to all "a" elements within the elements with the "homepage-nav-item" class */

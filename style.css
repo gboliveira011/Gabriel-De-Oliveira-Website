@@ -128,4 +128,13 @@ footer {
   padding: 20px;
   font-size: 0.75em;
   flex-shrink: 0; /* Setting flex-shrink to 0 prevents footer from shrinking */
+  /* Background color with opacity to help blend in with image background */
+  background-color: rgb(0 0 0 / 0.75);
+  color: white;
+}
+
+h1 {
+  /* Background color with opacity to help blend in with image background */
+  background-color: rgba(15, 15, 15, 0.75);
+  color: white;
 }

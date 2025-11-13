@@ -97,7 +97,10 @@ h1 {
   background-color: rgba(37, 37, 37, 0.75);
   color: white;
   width: 95%;
+  padding: 8px;
 }
+
+
 
 /* Classes (.) are used for multiple, reusable elements */
 .left-text {
@@ -139,6 +142,11 @@ h1 {
 
 .homepage-nav-item img {
     width: 100%; /* Width is all of the parent element's width */
+    height: auto
+}
+
+.regular-page, #homepage-nav {
+    margin-bottom: 25px;
 }
 
 footer {
@@ -154,4 +162,14 @@ footer {
 
 .social-icon {
   font-size: 4.5em;
+}
+
+/* Mobile */
+@media only screen and (max-width: 767px) {
+    #homepage-nav {
+        flex-direction: column;
+    }
+    #homepage-nav-item {
+        width: 400px;
+    }
 }
